@@ -16,8 +16,6 @@ jobs:
       # Descarga las fuentes
       - name: descarga las fuentes
         uses: actions/checkout@v4 #action para descargar las fuentes obtenido desde https://github.com/marketplace?type=actions tod action inicia con el nombre uses
-        run: |
-          echo "Fuentes descargadas"
       
       # Configura Java
       - name: Ejecuta una fuente java
