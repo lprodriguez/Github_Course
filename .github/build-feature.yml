@@ -29,5 +29,5 @@ jobs:
       # Ejecuta Maven
       - name: Ejecuta Maven
         run: |
-          mvn clean install
+          mvnw clean install
           echo "Ejecutado con Maven"
