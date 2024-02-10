@@ -14,11 +14,11 @@ jobs:
     steps: #pasos
 
       # Descarga las fuentes
-      - name: descarga las fuentes
+      - name: Descarga las fuentes
         uses: actions/checkout@v4 #action para descargar las fuentes obtenido desde https://github.com/marketplace?type=actions tod action inicia con el nombre uses
       
       # Configura Java
-      - name: Ejecuta una fuente java
+      - name: Configura Java
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin' # See 'Supported distributions' for available options
