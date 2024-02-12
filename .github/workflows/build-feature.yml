@@ -1,0 +1,30 @@
+
+name: build and test feature branch
+
+# This workflow is triggered by a push to the repository.
+on:
+  push:
+    branches:
+      - feature/* #en toda rama que comience con la palabra feature
+
+# A job to build the application with Maven and run unit tests.
+jobs:
+  build-feature: #nombre del job
+    runs-on: ubuntu-latest #runner con la ultima version de ubuntu
+    steps: #pasos
+
+      # Fuente https://github.com/marketplace/actions/checkout
+      - name: Descarga las fuentes
+        uses: actions/checkout@v4 
+
+      # Fuente https://github.com/marketplace/actions/setup-java-jdk
+      - name: Configura Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin' # See 'Supported distributions' for available options
+          java-version: '17'
+
+      - name: Ejecuta Maven
+        run: |
+          mvn clean install
+          echo "Ejecutado con Maven"
